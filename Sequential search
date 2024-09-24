@@ -1,0 +1,59 @@
+#include<iostream>
+#define max 100
+using namespace std;
+int n,x,arr[max],key;
+class sequential
+{
+	public:
+    	void input()
+    	{
+        	cout<<"Enter how many elements you want to store \n";
+        	cin>>n;
+        	for (int i=0;i<n;i++)
+        	{
+            	cout<<"Enter the data for  "<<i <<" Position = ";
+            	cin>>arr[i];
+        	}
+     	}
+     	void menu()
+        	{
+            	cout<<"Enter 1 to Search Element \nEnter 2 to Exit\n";
+            	cin>>x;
+            	while(x==1)
+            	{
+                	search();
+            	}
+        	}
+    	void search()
+    	{
+        	cout<<"enter the element you want to search \n";
+        	cin>>key;
+        	int pos=-1;
+        	for (int i=0;i<=n;i++)
+        	{
+            	if(key==arr[i])
+            	{
+                	pos=i;
+                	break;
+            	}         	 
+        	}
+        	if(pos==-1)
+        	{
+            	cout<<"Element "<<key<<" is not found \n";
+            	cout<<"The Element has been inserted at the end of the array\n";
+            	arr[n]==key;
+        	}
+        	else
+        	{
+            	cout<<"Element "<<key<<"  is found at "<<pos<<"\n";
+        	}
+    	menu();
+    	}
+};
+int main()
+{
+	sequential s;
+	s.input();
+	s.menu();
+	return 0;
+}
