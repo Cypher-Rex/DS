@@ -40,8 +40,6 @@ class sequential
         	if(pos==-1)
         	{
             	cout<<"Element "<<key<<" is not found \n";
-            	cout<<"The Element has been inserted at the end of the array\n";
-            	arr[n]==key;
         	}
         	else
         	{
